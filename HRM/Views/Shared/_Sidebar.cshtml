@@ -12,24 +12,27 @@
         @foreach (var pitem in plist)
         {
             <li class="treeview">
-                <a href="@pitem.Link">
-                    @Html.Label(pitem.Name)
+                <a href="#">
+                    <i class="@pitem.CssClass"></i>
+                    <span>@Html.Label(pitem.Name)</span>
+                    <i class="fa fa-angle-left pull-right"></i>
                 </a>
                 @{
                     var clist = menuItem.Where(x => x.ParentID == pitem.ID).ToList();
-                    foreach (var citem in clist)
-                    {
-                        <ul class="treeview-menu">
+                    <ul class="treeview-menu" style="display: block;">
+                        @foreach (var citem in clist)
+                        {
                             <li>
                                 <a href="@citem.Link">
+                                    <i class="@citem.CssClass"></i>
                                     @Html.Label(citem.Name)
                                 </a>
                             </li>
-                        </ul>
-                    }
+                        }
+                    </ul>
                 }
             </li>
-        }
+                    }
     </ul>
 
 }

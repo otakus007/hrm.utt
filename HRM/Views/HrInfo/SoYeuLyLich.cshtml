@@ -3,6 +3,262 @@
     ViewBag.Title = "SoYeuLyLich";
     Layout = "~/Views/Shared/_Layouts.cshtml";
 }
+@section header{
+    <h1>Trang thông tin sơ yếu lý lịch</h1>
+    <label class="control-label" for="inputError">Các thông tin đánh dấu <font color="red">*</font> là các thông tin bắt buộc</label>
+}
 
-<h2>SoYeuLyLich</h2>
+<section class="content">
+    <div class="row">
+        <!-- left column -->
+        <div class="col-md-4">
+            <div class="box">
+                <div class="box-header with-border">
+                    <h3 class="box-title">Thông tin cơ bản</h3>
+                </div><!-- /.box-header -->
+                <div class="box-body">
+                    <table class="table table-striped table-hover">
+                        <tbody>
+                        <tr>
+                            <td>Mã nhân sự</td>
+                            <td><input type="text" class="form-control" disabled="disabled"></td>
+                        </tr>
+                        <tr>
+                            <td>Họ và tên <font color="red">*</font></td>
+                            <td><input type="text" class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td>Ngày sinh <font color="red">*</font></td>
+                            <td><input type="text" class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td>Giới tính</td>
+                            <td><label><input type="radio" name="gioitinh" value="1" checked="">Nam</label>
+                                <label><input type="radio" name="gioitinh" value="0">Nữ</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Email UTT</td>
+                            <td><input type="email" class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td>Email khác</td>
+                            <td><input type="email" class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td>Tên khác</td>
+                            <td><input type="text" class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td>Dân tộc <font color="red">*</font></td>
+                            <td><select class="form-control"></select></td>
+                        </tr>
+                        <tr>
+                            <td>Tôn giáo <font color="red">*</font></td>
+                            <td><select class="form-control"></select></td>
+                        </tr>
+                        <tr>
+                            <td>Số chứng minh thư <font color="red">*</font></td>
+                            <td><input type="text" class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td>Ngày cấp <font color="red">*</font></td>
+                            <td><input type="text" class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td>Nơi cấp</td>
+                            <td><input type="text" class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td>Số hộ chiếu</td>
+                            <td><input type="text" class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td>Ngày cấp hộ chiếu</td>
+                            <td><input type="text" class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td>Nơi cấp hộ chiếu</td>
+                            <td><input type="text" class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td>Hoàn cảnh xuất thân</td>
+                            <td><select class="form-control"></select></td>
+                        </tr>
+                        <tr>
+                            <td>Nhóm máu <font color="red">*</font></td>
+                            <td><select class="form-control"></select></td>
+                        </tr>
+                        <tr>
+                            <td>Tình trạng sức khỏe <font color="red">*</font></td>
+                            <td><input type="text" class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td>Chiều cao (cm) <font color="red">*</font></td>
+                            <td><input type="text" class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td>Cân nặng <font color="red">*</font></td>
+                            <td><input type="text" class="form-control"></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div><!-- /.box-body -->
+            </div>
+        </div><!--/.col (left) -->
+        <!-- center column -->
+        <div class="col-md-4">
+            <div class="box">
+                <div class="box-header with-border">
+                    <h3 class="box-title">Quê quán</h3>
+                </div><!-- /.box-header -->
+                <div class="box-body">
+                    <table class="table table-striped table-hover">
+                        <tbody>
+                        <tr>
+                            <td>Quốc gia <font color="red">*</font></td>
+                            <td><select class="form-control"></select></td>
+                        </tr>
+                        <tr>
+                            <td>Tỉnh/thành phố <font color="red">*</font></td>
+                            <td><select class="form-control"></select></td>
+                        </tr>
+                        <tr>
+                            <td>Quận/huyện <font color="red">*</font></td>
+                            <td><select class="form-control"></select></td>
+                        </tr>
+                        <tr>
+                            <td>Phường/xã</td>
+                            <td><input type="text" class="form-control"></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div><!-- /.box-body -->
+            </div>
+            <div class="box">
+                <div class="box-header with-border">
+                    <h3 class="box-title">Hộ khẩu thường trú</h3>
+                </div><!-- /.box-header -->
+                <div class="box-body">
+                    <table class="table table-striped table-hover">
+                        <tbody>
+                        <tr>
+                            <td>Tỉnh/thành phố <font color="red">*</font></td>
+                            <td><select class="form-control"></select></td>
+                        </tr>
+                        <tr>
+                            <td>Quận/huyện <font color="red">*</font></td>
+                            <td><select class="form-control"></select></td>
+                        </tr>
+                        <tr>
+                            <td>Phường/xã <font color="red">*</font></td>
+                            <td><input type="text" class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td>Đường/thôn</td>
+                            <td><input type="text" class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td>Số nhà/đội</td>
+                            <td><input type="text" class="form-control"></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div><!-- /.box-body -->
+            </div>
+            <div class="box">
+                <div class="box-header with-border">
+                    <h3 class="box-title">Điện thoại liên lạc</h3>
+                </div><!-- /.box-header -->
+                <div class="box-body">
+                    <table class="table table-striped table-hover">
+                        <tbody>
+                            <tr>
+                                <td>Di động</td>
+                                <td><input type="text" class="form-control"></td>
+                            </tr>
+                            <tr>
+                                <td>Nhà riêng</td>
+                                <td><input type="text" class="form-control"></td>
+                            </tr>
+                            <tr>
+                                <td>Cơ quan</td>
+                                <td><input type="text" class="form-control"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div><!-- /.box-body -->
+            </div>
+        </div><!--/.col (center) -->
+        <!-- right column-->
+        <div class="col-md-4">
+            <div class="box">
+                <div class="box-header with-border">
+                    <h3 class="box-title">Nơi sinh</h3>
+                </div><!-- /.box-header -->
+                <div class="box-body">
+                    <table class="table table-striped table-hover">
+                        <tbody>
+                            <tr>
+                                <td>Quốc gia <font color="red">*</font></td>
+                                <td><select class="form-control"></select></td>
+                            </tr>
+                            <tr>
+                                <td>Tỉnh/thành phố <font color="red">*</font></td>
+                                <td><select class="form-control"></select></td>
+                            </tr>
+                            <tr>
+                                <td>Quận/huyện <font color="red">*</font></td>
+                                <td><select class="form-control"></select></td>
+                            </tr>
+                            <tr>
+                                <td>Phường/xã</td>
+                                <td><input type="text" class="form-control"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div><!-- /.box-body -->
+            </div>
 
+            <div class="box">
+                <div class="box-header with-border">
+                    <h3 class="box-title">Nơi ở hiện tại</h3>
+                </div><!-- /.box-header -->
+                <div class="box-body">
+                    <table class="table table-striped table-hover">
+                        <tbody>
+                            <tr>
+                                <td>Quốc gia <font color="red">*</font></td>
+                                <td><select class="form-control"></select></td>
+                            </tr>
+                            <tr>
+                                <td>Tỉnh <font color="red">*</font></td>
+                                <td><select class="form-control"></select></td>
+                            </tr>
+                            <tr>
+                                <td>Thành phố <font color="red">*</font></td>
+                                <td><select class="form-control"></select></td>
+                            </tr>
+                            <tr>
+                                <td>Quận/huyện <font color="red">*</font></td>
+                                <td><select class="form-control"></select></td>
+                            </tr>
+                            <tr>
+                                <td>Phường/xã</td>
+                                <td><input type="text" class="form-control"></td>
+                            </tr>
+                            <tr>
+                                <td>Đường/thôn</td>
+                                <td><input type="text" class="form-control"></td>
+                            </tr>
+                            <tr>
+                                <td>Số nhà/đội</td>
+                                <td><input type="text" class="form-control"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div><!-- /.box-body -->
+            </div>
+        </div><!--/.col (right) -->
+    </div>   <!-- /.row -->
+</section>

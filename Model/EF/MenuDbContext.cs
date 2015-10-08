@@ -18,7 +18,7 @@ namespace Model.EF
         {
             modelBuilder.Entity<Menu>()
                 .Property(e => e.Link)
-                .IsUnicode(false);
+                .IsUnicode(true);
         }
     }
 }

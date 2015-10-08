@@ -18,5 +18,8 @@ namespace Model.EF
 
         [StringLength(50)]
         public string Link { get; set; }
+
+        [StringLength(50)]
+        public string CssClass { get; set; }
     }
 }
