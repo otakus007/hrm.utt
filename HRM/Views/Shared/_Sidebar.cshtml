@@ -13,7 +13,7 @@
         {
             <li class="treeview">
                 <a href="@pitem.Link">
-                    <p>@Html.Label(pitem.Name)</p>
+                    @Html.Label(pitem.Name)
                 </a>
                 @{
                     var clist = menuItem.Where(x => x.ParentID == pitem.ID).ToList();
@@ -22,7 +22,7 @@
                         <ul class="treeview-menu">
                             <li>
                                 <a href="@citem.Link">
-                                    <p>@Html.Label(citem.Name)</p>
+                                    @Html.Label(citem.Name)
                                 </a>
                             </li>
                         </ul>

@@ -105,6 +105,12 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\HrConfigController.cs" />
+    <Compile Include="Controllers\HrCredentialController.cs" />
+    <Compile Include="Controllers\HrInfoController.cs" />
+    <Compile Include="Controllers\HrManageController.cs" />
+    <Compile Include="Controllers\HrPrintController.cs" />
+    <Compile Include="Controllers\HrStatisticController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -116,6 +122,39 @@
     <Content Include="Views\Shared\_Layouts.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\_Sidebar.cshtml" />
+    <Content Include="Views\HrInfo\SoYeuLyLich.cshtml" />
+    <Content Include="Views\HrInfo\DangDoanQuanNgu.cshtml" />
+    <Content Include="Views\HrInfo\QuanHeGiaDinh.cshtml" />
+    <Content Include="Views\HrInfo\HopDongLaoDong.cshtml" />
+    <Content Include="Views\HrInfo\QuaTrinhCongTac.cshtml" />
+    <Content Include="Views\HrInfo\QuaTrinhDaoTao.cshtml" />
+    <Content Include="Views\HrInfo\TrinhDoKhac.cshtml" />
+    <Content Include="Views\HrInfo\KhenThuong.cshtml" />
+    <Content Include="Views\HrInfo\HocHamDanhHieu.cshtml" />
+    <Content Include="Views\HrInfo\ThiDua.cshtml" />
+    <Content Include="Views\HrInfo\LichSuLuong.cshtml" />
+    <Content Include="Views\HrInfo\DiNuocNgoai.cshtml" />
+    <Content Include="Views\HrInfo\HdLuanVan.cshtml" />
+    <Content Include="Views\HrInfo\DeTaiKhoaHoc.cshtml" />
+    <Content Include="Views\HrInfo\BaoKhoaHoc.cshtml" />
+    <Content Include="Views\HrInfo\HdXuatBan.cshtml" />
+    <Content Include="Views\HrInfo\QuaTrinhGiangDay.cshtml" />
+    <Content Include="Views\HrCredential\DinhNghiaQuyen.cshtml" />
+    <Content Include="Views\HrCredential\CapQuyen.cshtml" />
+    <Content Include="Views\HrManage\DanhSachHoSo.cshtml" />
+    <Content Include="Views\HrManage\ThemMoiHoSo.cshtml" />
+    <Content Include="Views\HrManage\SuaHoSo.cshtml" />
+    <Content Include="Views\HrManage\NghiViec.cshtml" />
+    <Content Include="Views\HrManage\HuuTri.cshtml" />
+    <Content Include="Views\HrManage\ChuyenPhongBan.cshtml" />
+    <Content Include="Views\HrPrint\Mau2Ctwd.cshtml" />
+    <Content Include="Views\HrPrint\Mau2Cbnv.cshtml" />
+    <Content Include="Views\HrPrint\HoSoCanBo.cshtml" />
+    <Content Include="Views\HrPrint\LyLichKhoaHoc.cshtml" />
+    <Content Include="Views\HrPrint\KhenThuong.cshtml" />
+    <Content Include="Views\HrStatistic\DanhSachHoSo.cshtml" />
+    <Content Include="Views\HrStatistic\TimKiemNangCao.cshtml" />
+    <Content Include="Views\HrStatistic\CoCauNgach.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -129,6 +168,7 @@
     <Folder Include="Assets\dist\" />
     <Folder Include="Assets\plugins\jQuery\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\HrConfig\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Model\Model.csproj">
