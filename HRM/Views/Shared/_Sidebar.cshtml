@@ -1,0 +1,35 @@
+﻿<!-- sidebar menu: : style can be found in sidebar.less -->
+@using Model.EF
+@using Model.DAL
+@model List<Menu>
+
+@{
+    var dao = new MenuDao();
+    List<Menu> menuItem = dao.GetMenus();
+    var plist = menuItem.Where(x => x.ParentID == null).ToList();
+    <ul class="sidebar-menu">
+        <li class="header">MAIN NAVIGATION</li>
+        @foreach (var pitem in plist)
+        {
+            <li class="treeview">
+                <a href="@pitem.Link">
+                    <p>@Html.Label(pitem.Name)</p>
+                </a>
+                @{
+                    var clist = menuItem.Where(x => x.ParentID == pitem.ID).ToList();
+                    foreach (var citem in clist)
+                    {
+                        <ul class="treeview-menu">
+                            <li>
+                                <a href="@citem.Link">
+                                    <p>@Html.Label(citem.Name)</p>
+                                </a>
+                            </li>
+                        </ul>
+                    }
+                }
+            </li>
+        }
+    </ul>
+
+}
